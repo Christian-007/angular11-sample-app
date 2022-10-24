@@ -1,27 +1,26 @@
-# Angular11SampleApp
+# Angular 11 Sample App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
-## Development server
+## Pre-requisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+If you want to run this project locally, make sure you have the following installed in your operating system:
 
-## Code scaffolding
+- Node.js `v14.x.x` or higher
+- Angular CLI v11 or higher (skip this if you want to use `npx` instead)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running the project locally
 
-## Build
+1. Clone the project.
+2. Run `npm install` within the project directory.
+3. Run `ng serve`.
+4. Open your browser on `http://localhost:4200`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Triggering and sending JS errors to New Relic
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Change the `apiKey` and `applicationId` values on 3 files: `webpack.config.js`, `new-relic-list-source-map.js`, and `new-relic-delete-source-map.js` accordingly.
+2. Run `ng build --prod` (this will bundle the Angular app and upload the source map files to New Relic).
+3. Run `node ./new-relic-list-source-map.js` to list the uploaded source map files (to make sure all files are uploaded successfully).
+4. Run `npm run serve:spa` (this will open the app in `http://localhost:3000`).
+5. Trigger some errors by clicking `notAFunctionError()`, `uriError()`, `syntaxError()`, or `rangeError()` buttons on the browser.
+6. Go to One New Relic dashboard.
