@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve:spa": "lite-server --baseDir='dist/angular11-tailwindcss'"
+    "serve:spa": "lite-server --baseDir='dist/angular11-sample-app'"
   },
   "private": true,
   "dependencies": {
