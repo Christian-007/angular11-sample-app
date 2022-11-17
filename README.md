@@ -18,9 +18,9 @@ If you want to run this project locally, make sure you have the following instal
 
 ## Triggering and sending JS errors to New Relic
 
-1. Change the `apiKey` and `applicationId` values on 3 files: `webpack.config.js`, `new-relic-list-source-map.js`, and `new-relic-delete-source-map.js` accordingly.
+1. Change the `apiKey` and `applicationId` values on 3 files: `./webpack.config.js`, `./src/app/shared/new-relic-list-source-map.js`, and `./src/app/shared/new-relic-delete-source-map.js` accordingly.
 2. Run `ng build --prod` (this will bundle the Angular app and upload the source map files to New Relic).
-3. Run `node ./new-relic-list-source-map.js` to list the uploaded source map files (to make sure all files are uploaded successfully).
+3. Run `node ./src/app/shared/new-relic-list-source-map.js` to list the uploaded source map files (to make sure all files are uploaded successfully).
 4. Run `npm run serve:spa` (this will open the app in `http://localhost:3000`).
 5. Trigger some errors by clicking `notAFunctionError()`, `uriError()`, `syntaxError()`, or `rangeError()` buttons on the browser.
 6. Go to One New Relic dashboard.
