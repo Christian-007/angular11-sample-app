@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "serve:spa": "lite-server --baseDir='dist/angular11-sample-app'"
+    "serve:spa": "lite-server --baseDir='dist/angular11-sample-app'",
+    "nr:list": "node ./src/app/shared/new-relic-list-source-map.js",
+    "nr:delete": "node ./src/app/shared/new-relic-delete-source-map.js"
   },
   "private": true,
   "dependencies": {
