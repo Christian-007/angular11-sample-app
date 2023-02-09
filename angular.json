@@ -45,7 +45,7 @@
                 "scripts": true,
                 "styles": true,
                 "hidden": true,
-                "vendor": true
+                "vendor": false
               },
               "namedChunks": false,
               "extractLicenses": true,
